@@ -1,5 +1,5 @@
 import './App.css'
-import BG from '../public/images/bg-header-desktop.svg'
+import BG from '/images/bg-header-desktop.svg'
 import data from '../data/data.json'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -45,7 +45,7 @@ function App() {
               filterBox && filterBox.map((ftr) => (
                 <div className="ftr-box" key={ftr}>
                   <span className='ftr'>{ftr}</span>
-                  <span className='close' onClick={()=> removeTag(ftr)}><img src={'/images/icon-remove.svg'} alt="" /></span>
+                  <span className='close' onClick={()=> removeTag(ftr)}><img src={'./images/icon-remove.svg'} alt="" /></span>
                 </div>
               ))
             }
@@ -86,6 +86,9 @@ function App() {
             </div>
           ))
         }
+      </div>
+      <div className="attr" style={{textAlign: 'center', padding: '10px'}}>
+        <a href="https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt" target={'_blank'} style={{color: '#333'}}>Frontend Mentor Challenge</a>
       </div>
     </section>
   )
